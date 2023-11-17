@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Função para identificar cliente por placa
+// Função para identificar aluno por cadastro
 function identifica(matricula) {
     for (let aluno of alunos) {
         if (aluno.matricula === matricula.id) {
@@ -62,7 +62,7 @@ function modal(button) {
         return;
     }
 
-    // Elementos do modal de informações do cliente
+    // Elementos do modal de informações do cadastro
     let matriculaModal = modal.querySelector("#matriculaModal");
     let nomeModal = modal.querySelector("#nomeModal");
     let livroModal = modal.querySelector("#livroModal");
@@ -101,7 +101,7 @@ function modal(button) {
     modal.style.display = "block";
 }
 
-// Função para excluir cliente
+// Função para excluir cadastro
 function excluirAluno(matricula) {
     alunos = alunos.filter(aluno => aluno.matricula !== matricula);
     localStorage.setItem("alunos", JSON.stringify(alunos));
@@ -136,7 +136,7 @@ function carrega() {
     }
 }
 
-// Função para cadastrar novo cliente
+// Função para cadastrar novo aluno
 function cadastrarAluno() {
     let matricula = document.getElementById("matricula").value;
     let nome = document.getElementById("nome").value;
@@ -144,7 +144,7 @@ function cadastrarAluno() {
     let cpf = document.getElementById("cpf").value;
     let telefone = document.getElementById("telefone").value;
 
-    // Verifica se a placa já está cadastrada
+    // Verifica se a matricula já está cadastrada
     if (alunoExistente(matricula)) {
         alert("Aluno já cadastrado.");
         return;
@@ -164,14 +164,14 @@ function cadastrarAluno() {
     // Salva no localStorage
     localStorage.setItem("alunos", JSON.stringify(alunos));
 
-    // Recarrega a tabela após cadastrar um novo cliente
+    // Recarrega a tabela após cadastrar um novo aluno
     carrega();
 
-    // Esconde o modal de novo cliente
+    // Esconde o modal de novo aluno
     modalNovoAluno.style.display = "none";
 }
 
-// Função para verificar se o cliente já existe
+// Função para verificar se o aluno já existe
 function alunoExistente(matricula) {
     return alunos.some(aluno => aluno.matricula === matricula);
 }
