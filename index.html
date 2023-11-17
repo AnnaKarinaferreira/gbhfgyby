@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Oleo Sesi Senai</title>
+</head>
+
+<body id="corpo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div style="text-align: center">
+                    
+                </div>
+                <h3 class="text-center">
+                    B I B L I O T E C A 
+                </h3>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>
+                                M A T R I C U L A
+                            </th>
+                            <th>
+                                N O M E
+                            </th>
+                            <th>
+                                L I V R O
+                            </th>
+                            <th>
+                                C P F
+                            </th>
+                            <th>
+                                T E L E F O N E
+                            </th>
+                            
+                            <th>
+                                S O B R E
+                            </th>
+                    </thead>
+                    <tbody id="tabela"></tbody>
+                </table>
+                <dl>
+                    Selecione um aluno desejado para obter mais informações
+                </dl>
+
+                <!-- Botão Novo Aluno -->
+                <div class="text-center">
+                    <button class="btn btn-primary" id="btnNovoAluno">Novo Aluno</button>
+                </div>
+
+                <!-- Modal Novo Aluno -->
+                <div id="modalNovoAluno" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Cadastrar Novo Aluno</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formNovoAluno">
+                                <label for="matricula">Matricula:</label>
+                                <input type="text" id="matricula" required>
+
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" required>
+
+                                <label for="livro">Livro:</label>
+                                <select id="livro" required>
+                                    <option value="Ruim">Ruim</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Bom">Bom</option>
+                                </select>
+
+                                <label for="cpf">Cpf:</label>
+                                <select id="cpf" required>
+                                    <option value="Ruim">Ruim</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Bom">Bom</option>
+                                </select>
+
+                                <label for="telefone">Telefone:</label>
+                                <select id="telefone" required>
+                                    <option value="Ruim">Ruim</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Bom">Bom</option>
+                                </select>
+
+                                <button type="button" onclick="cadastrarAluno()">Cadastrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal de Informações do Cliente -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Informações do Aluno</h2>
+                        <p>Matricula: <span id="matriculaModal"></span></p>
+                        <p>Nome: <span id="nomeModal"></span></p>
+                        <p>Livro: <span id="livroModal"></span></p>
+                        <p>Cpf: <span id="cpfModal"></span></p>
+                        <p>Telefone: <span id="telefoneModal"></span></p>
+                        <button id="btnExcluirAluno">Excluir Aluno</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
