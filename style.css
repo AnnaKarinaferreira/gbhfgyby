@@ -76,15 +76,15 @@ tr {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 /* Estilos para o conteúdo do modal de informações do cliente */
 #myModal .modal-content {
     /* Estilos para o conteúdo do modal de informações do cliente */
     position: fixed;
-    background-color: #080000;
+    background-color: #fff2f2;
     width: 100%;
 }
 
@@ -120,7 +120,7 @@ tr {
 .modal-footer {
     /* Estilos para o cabeçalho, corpo e rodapé do modal */
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #9eb69e;
     color: white;
 }
 
